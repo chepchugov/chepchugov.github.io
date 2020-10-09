@@ -1,0 +1,81 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("roboto.ttf");
+}
+
+:root {
+    --container-size: 40vw;
+    --space: 0.25vw;
+    --font-size: 2vw;
+}
+
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ui {
+    font-size: var(--font-size);
+    font-weight: bold;
+}
+
+.counter {
+    float: left;
+}
+
+.timer {
+    float: right;
+}
+
+.grid {
+    width: var(--container-size);
+    height: var(--container-size);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    padding: var(--space);
+}
+
+.row {
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    margin: var(--space) 0;
+}
+
+.column {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    margin: 0 var(--space);
+}
+
+.cell {
+    height: 100%;
+
+    border: var(--space) solid transparent;
+    cursor: pointer;
+
+    transition: border-color 0.2s ease-in-out;
+}
+
+.cell:hover {
+    border-color: white;
+}
+
+.aim {
+}
